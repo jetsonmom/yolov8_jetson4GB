@@ -6,3 +6,4 @@
 #####  Jetson Nano Developer Kit SD Card Image, and note where it was saved on the computer.
 #####[Download the Jetson Nano Developer Kit SD Card Image]([https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write] URL "Download Jetson Nano Image")
 
+
