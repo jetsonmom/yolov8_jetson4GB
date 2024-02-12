@@ -92,3 +92,23 @@ conda install -y anaconda-client
 ````
 !![5](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/7a159b75-c993-4da4-8a71-fd21ee705a40)
 
+##### 7. vi ~/.bashrc -> # 'activate a conda environment' 앞에 '#'을 써준다 저장한다. wq!
+
+```bash
+vi ~/.bashrc
+````
+```bash
+source ~/.bashrc
+````
+```bash
+ conda activate py38
+````
+##### 8. gdown이 없다면 설치한다 가상에서
+```bash
+ pip install -U pip wheel gdown
+````
+!
+##### 9.   pytorch 1.11.0, torchvision 1.12.0설치 ->dli@dli-desktop:~$gdown https://drive.google.com/uc?id=1hs9HM0XJ2LPFghcn7ZMOs5qu5HexPXwM dli@dli-desktop:~$ gdown https://drive.google.com/uc?id=1m0d8ruUY8RvCP9eVjZw4Nc8LAwM8yuGV
+
+
+
