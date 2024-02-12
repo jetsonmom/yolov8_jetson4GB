@@ -10,6 +10,7 @@
 git clone https://github.com/jetsonworld/jetson-fan-ctl.git
 ls
 cd jetson-fan-ctl
+sudo sh install.sh
 ```
 
 
