@@ -71,9 +71,24 @@ conda create -n py38 python=3.8
 !![1](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e27f1316-7bc5-47cb-88d9-0009a2274891)
 !![2](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/8b656fe5-aaca-44e8-9c43-d1bc558a1fa7)
 
-###### 가상환경 만들기
+###### 가상환경 만들고 가상환경에서 실행한다.
 ```bash
 conda activate py38
 ````
 ###### 앞부분에 괄호가 생긴다.
-######(py38) dli@dli-desktop:~$ 
+###### (py38) dli@dli-desktop:~$ 
+```bash
+##### 6. python3 버전 확인하기
+```bash
+python3 --version
+````
+```bash
+conda install -y conda-build
+````
+!![4](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d5ffbf82-b689-4817-9e3d-726367259654)
+
+```bash
+conda install -y anaconda-client
+````
+!![5](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/7a159b75-c993-4da4-8a71-fd21ee705a40)
+
