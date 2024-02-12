@@ -7,5 +7,5 @@
 ######[Download the Jetson Nano Developer Kit SD Card Image]([https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write] URL "Download Jetson Nano Image")
 ##### 2. cooling fan
 ###### git clone  https://github.com/jetsonworld/jetson-fan-ctl.git
-###### "git clone https://github.com/jetsonworld/jetson-fan-ctl.git"
+###### "$ git clone https://github.com/jetsonworld/jetson-fan-ctl.git"
 
