@@ -4,5 +4,5 @@
 ##### https://medium.com/@deandu/how-to-use-the-yolov8-with-csi-camera-in-jetson-xavier-d2286a0f22bb
 ##### https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write
 #####  Jetson Nano Developer Kit SD Card Image, and note where it was saved on the computer.
-#####[Download the Jetson Nano Developer Kit SD Card Image]( https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write "Download Jetson Nano Image")
+#####[Download the Jetson Nano Developer Kit SD Card Image]((URL"https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write "Download Jetson Nano Image")
 
