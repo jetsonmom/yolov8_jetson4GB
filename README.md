@@ -8,5 +8,8 @@
 ##### 2. cooling fan
 ```bash
 git clone https://github.com/jetsonworld/jetson-fan-ctl.git
+###### dli@dli-desktop:$ ls
+```bash
+ls
 
 
