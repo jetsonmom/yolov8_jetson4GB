@@ -24,16 +24,29 @@ sudo apt-get install fonts-nanum fonts-nanum-coding fonts-nanum-extra
 ###### 참고 https://cyb.tw/docs/Tech/2020/9/18_Install-anaconda-on-Jetson-Nano.html#install-archiconda
 ```bash
 sudo apt-get update
-
+````
+```bash
 wget --quiet -O archiconda.sh https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh && \
     sh archiconda.sh -b -p $HOME/archiconda3 && \
     rm archiconda.sh
+````
 
+```bash
 export PATH="/path/dli/anaconda3/bin:$PATH"
+````
+```bash
 conda config --add channels gaiar
+````
+```bash
 conda config --add channels conda-forge
+````
+```bash
 conda config --add channels c4aarch64
-conda update -n base --all 
+````
+```bash
+conda update -n base --all
+````
+```bash 
 conda create -n py38 python=3.8
 ````
 
