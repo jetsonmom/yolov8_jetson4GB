@@ -50,3 +50,4 @@ conda update -n base --all
 conda create -n py38 python=3.8
 ````
 
+!![1](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e27f1316-7bc5-47cb-88d9-0009a2274891)
