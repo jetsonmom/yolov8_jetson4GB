@@ -75,5 +75,5 @@ conda create -n py38 python=3.8
 ```bash
 conda activate py38
 ````
-####### 앞부분에 괄호가 생긴다.
-#######(py38) dli@dli-desktop:~$ 
+###### 앞부분에 괄호가 생긴다.
+######(py38) dli@dli-desktop:~$ 
