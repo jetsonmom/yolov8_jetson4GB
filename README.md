@@ -21,6 +21,52 @@ sudo locale-gen ko_KR.UTF-8
 sudo apt-get install fonts-nanum fonts-nanum-coding fonts-nanum-extra
 ````
 ##### 5. conda install
+
+###### 참고 https://cyb.tw/docs/Tech/2020/9/18_Install-anaconda-on-Jetson-Nano.html#install-archiconda
+
+```bash
+sudo apt-get update
+````
+
+```bash
+wget --quiet -O archiconda.sh https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh && \
+    sh archiconda.sh -b -p $HOME/archiconda3 && \
+    rm archiconda.sh
+````
+
+```bash
+ export PATH="/path/dli/anaconda3/bin:$PATH"
+````
+###### 위의 명령을 해줬는데 command not found가 뜨면 터미널을 껏다가 다시 열어서 하세요
+
+###### 3.8을 설치하기 위해 챗에 물어보고 수정 된 명령들
+
+```bash
+conda config --add channels gaiar
+````
+###### 결과 
+###### Warning: 'gaiar' already in 'channels' list, moving to the top
+
+```bash
+conda config --add channels conda-forge
+````
+###### 결과 Warning: 'gaiar' already in 'channels' list, moving to the top
+
+```bash
+conda config --add channels c4aarch64
+````
+###### 결과 Warning: 'gaiar' already in 'channels' list, moving to the top
+
+```bash
+conda update -n base --all 
+###### 위의 문장은 실행에 시간이 많이 걸림 시간이 좀 걸림
+
+
+
+```bash
+conda create -n py38 python=3.8
+````
+
 ###### 참고 https://cyb.tw/docs/Tech/2020/9/18_Install-anaconda-o다
 !![1](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e27f1316-7bc5-47cb-88d9-0009a2274891)
 !![2](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/8b656fe5-aaca-44e8-9c43-d1bc558a1fa7)
