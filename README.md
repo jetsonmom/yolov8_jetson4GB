@@ -20,3 +20,20 @@ sudo apt-get install language-pack-ko
 sudo locale-gen ko_KR.UTF-8
 sudo apt-get install fonts-nanum fonts-nanum-coding fonts-nanum-extra
 ````
+##### 5. conda install
+###### 참고 https://cyb.tw/docs/Tech/2020/9/18_Install-anaconda-on-Jetson-Nano.html#install-archiconda
+```bash
+sudo apt-get update
+
+wget --quiet -O archiconda.sh https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh && \
+    sh archiconda.sh -b -p $HOME/archiconda3 && \
+    rm archiconda.sh
+
+export PATH="/path/dli/anaconda3/bin:$PATH"
+conda config --add channels gaiar
+conda config --add channels conda-forge
+conda config --add channels c4aarch64
+conda update -n base --all 
+conda create -n py38 python=3.8
+````
+
