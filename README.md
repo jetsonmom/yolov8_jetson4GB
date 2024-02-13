@@ -107,8 +107,8 @@ source ~/.bashrc
 ```bash
  pip install -U pip wheel gdown
 ````
-!
-##### 9.   pytorch 1.11.0, torchvision 1.12.0설치 ->dli@dli-desktop:~$gdown https://drive.google.com/uc?id=1hs9HM0XJ2LPFghcn7ZMOs5qu5HexPXwM dli@dli-desktop:~$ gdown https://drive.google.com/uc?id=1m0d8ruUY8RvCP9eVjZw4Nc8LAwM8yuGV
+
+##### 9.   pytorch 1.11.0, torchvision 1.12.0  설치 ->dli@dli-desktop:~$gdown https://drive.google.com/uc?id=1hs9HM0XJ2LPFghcn7ZMOs5qu5HexPXwM dli@dli-desktop:~$ gdown https://drive.google.com/uc?id=1m0d8ruUY8RvCP9eVjZw4Nc8LAwM8yuGV
 
 
 
