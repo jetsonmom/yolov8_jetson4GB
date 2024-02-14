@@ -77,8 +77,8 @@ conda activate py38
 ````
 ###### 앞부분에 괄호가 생긴다.
 ###### (py38) dli@dli-desktop:~$ 
-```bash
 ##### 6. python3 버전 확인하기
+
 ```bash
 python3 --version
 ````
