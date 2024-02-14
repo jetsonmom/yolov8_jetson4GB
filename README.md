@@ -161,5 +161,29 @@ print("CUDA used:", torch_cuda.is_available())
 CUDA used: True
 quit()  —>  빠져나오는 명령
 
-##### 11.
+##### 11. file clone 가상환경에
+ ```bash
+sudo git clone https://github.com/Tory-Hwang/Jetson-Nano2.git
+````
+```bash
+ ls
+cd Jetson-Nano2/V8
+````
+ ```bash
+pip install ultralytics
+````
+```bash
+gedit requirements.txt
+````
+```bash
+torch==1.11.0
+torchvision=0.12.0
+````
+```bash
+pip install -r requirements.txt
+````
+!![2](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/4442d525-ee44-425c-8dbc-83b76ad02718)
 
+```bash
+pip install ffmpeg-python
+````
