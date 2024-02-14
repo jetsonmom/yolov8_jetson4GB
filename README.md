@@ -140,6 +140,7 @@ cd Jetson-Nano2/V8
 Requirement already satisfied: typing-extensions in /home/dli/archiconda3/envs/py38/lib/python3.8/site-packages (from torch==1.11.0a0+gitbc2c6ed) (4.4.0)
 Installing collected packages: torch
 Successfully installed torch-1.11.0a0+gitbc2c6ed
+
 ###### 10 확인하기 (py38) dli@dli-desktop:~$ python3
  ```bash
 python3
@@ -148,19 +149,15 @@ import torchvision
 print("torch ver :",torch.__version__)
 print("CUDA used:", torch_cuda.is_available())
 ````
-###### 결과는 다음과 같다. Python 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 05:56:18) 
+결과는 다음과 같다. Python 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 05:56:18) 
 [GCC 10.3.0] on linux Type "help", "copyright", "credits" or "license" for more information. 
 import torch
 import torchvision 
 print("torch ver :",torch.__version__) 
-<span style="color:red;">이 텍스트는 빨간색입니다.</span>
 torch ver : 1.11.0a0+gitbc2c6ed
 print("torchvision ver :",torchvision.__version__)
-
-<span style="color:purple;">torchvision ver : 0.12.0a0+9b5a3fe</span>
 torchvision ver : 0.12.0a0+9b5a3fe
 print("CUDA used:", torch_cuda.is_available())
 CUDA used: True
 quit()  —>  빠져나오는 명령
-######## 11.
-<span style="color:purple;">torchvision ver : 0.12.0a0+9b5a3fe</span>
+
