@@ -114,14 +114,31 @@ source ~/.bashrc
 
 ```bash
 gdown https://drive.google.com/uc?id=1hs9HM0XJ2LPFghcn7ZMOs5qu5HexPXwM
+````
+```bash
 gdown https://drive.google.com/uc?id=1m0d8ruUY8RvCP9eVjZw4Nc8LAwM8yuGV
- sudo  mv torch-1.11.0a0+gitbc2c6ed-cp38-cp38-linux_aarch64.whl ~/Jetson-Nano2/V8
+````
+```bash
+sudo  mv torch-1.11.0a0+gitbc2c6ed-cp38-cp38-linux_aarch64.whl ~/Jetson-Nano2/V8
+````
 
-
+```bash
 sudo  mv torchvision-0.12.0a0+9b5a3fe-cp38-cp38-linux_aarch64.whl ~/Jetson-Nano2/V8
-
 ````
 ###### 가상환경으로 간다.
 ```bash
  pip install torch-*.whl torchvision-*.whl
 ````
+```bash
+ conda activate py38
+````
+```bash
+cd Jetson-Nano2/V8
+````
+```bash
+ pip install torch-*.whl torchvision-*.whl
+````
+###### 결과는 다음과 같다. Processing ./torch-1.11.0a0+gitbc2c6ed-cp38-cp38-linux_aarch64.whl
+Requirement already satisfied: typing-extensions in /home/dli/archiconda3/envs/py38/lib/python3.8/site-packages (from torch==1.11.0a0+gitbc2c6ed) (4.4.0)
+Installing collected packages: torch
+Successfully installed torch-1.11.0a0+gitbc2c6ed
