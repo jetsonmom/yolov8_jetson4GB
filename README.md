@@ -153,8 +153,10 @@ print("CUDA used:", torch_cuda.is_available())
 import torch
 import torchvision 
 print("torch ver :",torch.__version__) 
+<span style="color:red;">이 텍스트는 빨간색입니다.</span>
 torch ver : 1.11.0a0+gitbc2c6ed
 print("torchvision ver :",torchvision.__version__)
+<span style="color:purple;">torchvision ver : 0.12.0a0+9b5a3fe</span>
 torchvision ver : 0.12.0a0+9b5a3fe
 print("CUDA used:", torch_cuda.is_available())
 CUDA used: True
