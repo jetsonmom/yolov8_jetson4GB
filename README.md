@@ -110,5 +110,16 @@ source ~/.bashrc
 
 ##### 9.   pytorch 1.11.0, torchvision 1.12.0  설치 ->dli@dli-desktop:~$gdown https://drive.google.com/uc?id=1hs9HM0XJ2LPFghcn7ZMOs5qu5HexPXwM dli@dli-desktop:~$ gdown https://drive.google.com/uc?id=1m0d8ruUY8RvCP9eVjZw4Nc8LAwM8yuGV
 
+```bash
+gdown https://drive.google.com/uc?id=1hs9HM0XJ2LPFghcn7ZMOs5qu5HexPXwM
+gdown https://drive.google.com/uc?id=1m0d8ruUY8RvCP9eVjZw4Nc8LAwM8yuGV
+ sudo  mv torch-1.11.0a0+gitbc2c6ed-cp38-cp38-linux_aarch64.whl ~/Jetson-Nano2/V8
 
 
+sudo  mv torchvision-0.12.0a0+9b5a3fe-cp38-cp38-linux_aarch64.whl ~/Jetson-Nano2/V8
+
+````
+###### 가상환경으로 간다.
+```bash
+ pip install torch-*.whl torchvision-*.whl
+````
