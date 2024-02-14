@@ -149,7 +149,7 @@ import torchvision
 print("torch ver :",torch.__version__)
 print("CUDA used:", torch_cuda.is_available())
 ````
-결과는 다음과 같다. Python 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 05:56:18) 
+####### 결과는 다음과 같다. Python 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 05:56:18) 
 [GCC 10.3.0] on linux Type "help", "copyright", "credits" or "license" for more information. 
 import torch
 import torchvision 
