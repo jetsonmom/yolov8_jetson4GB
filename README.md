@@ -16,9 +16,11 @@ sudo sh install.sh
 ##### 3.  usb카메라 (usb카메라는 잘 된다. 하지만 csi카메라는 가상에서는 실행이 되질 않았다)
 
 ##### 4. swap memory
-```bash
+``` bash
 free -m
+
 ```
+##### 결과
 !![Screenshot from 2024-03-08 17-55-55](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e9c856b1-259d-434e-984b-7ea3b2759ec2)
 
 ``` bash
@@ -26,8 +28,8 @@ free -m
  sudo chmod 600 /swapfile
  sudo mkswap /swapfile
  sudo mkswap /swapfile
-
-
+```
+##### 결과
 !![Screenshot from 2024-03-08 17-58-15](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e9a6381b-435b-48a4-8376-981448ab4293)
 
 
