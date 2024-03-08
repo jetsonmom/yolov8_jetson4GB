@@ -63,13 +63,14 @@ sh archiconda.sh -b -p $HOME/archiconda3 && \
 rm archiconda.sh
 
 ````
+###### archiconda3 폴더가 생긴다.
 
 ```bash
  export PATH="/path/dli/anaconda3/bin:$PATH"
 ````
 ###### 위의 명령을 해줬는데 command not found가 뜨면 터미널을 껏다가 다시 열어서 하세요
 
-###### 3.8을 설치하기 위해 챗에 물어보고 수정 된 명령들
+###### 3.8을 설치하기 위해 챗에 물어보고 수정 된 명령들  설정 갱신에 필요하다고 한다. 그런데 이미 있다고 나온다
 
 ```bash
 conda config --add channels gaiar
@@ -77,12 +78,12 @@ conda config --add channels gaiar
 ###### 결과 
 ###### Warning: 'gaiar' already in 'channels' list, moving to the top
 
-```bash
+``` bash
 conda config --add channels conda-forge
 ````
 ###### 결과 Warning: 'gaiar' already in 'channels' list, moving to the top
 
-```bash
+``` bash
 conda config --add channels c4aarch64
 ````
 ###### 결과 Warning: 'gaiar' already in 'channels' list, moving to the top
@@ -96,7 +97,7 @@ conda update -n base --all
 !![Screenshot from 2024-03-08 18-24-19](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d38a4f30-7826-4a26-a8a5-565c8c3707c5)
 
 
-```bash
+``` bash
 conda create -n py38 python=3.8
 ````
 
@@ -113,32 +114,32 @@ conda activate py38
 ###### (py38) dli@dli-desktop:~$ 
 ##### 6. python3 버전 확인하기
 
-```bash
+``` bash
 python3 --version
 ````
-```bash
+``` bash
 conda install -y conda-build
 ````
 !![4](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d5ffbf82-b689-4817-9e3d-726367259654)
 
-```bash
+``` bash
 conda install -y anaconda-client
 ````
 !![5](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/7a159b75-c993-4da4-8a71-fd21ee705a40)
 
 ##### 7. vi ~/.bashrc -> # 'activate a conda environment' 앞에 '#'을 써준다 저장한다. wq!
 
-```bash
+``` bash
 vi ~/.bashrc
 ````
-```bash
+``` bash
 source ~/.bashrc
 ````
-```bash
+``` bash
  conda activate py38
 ````
 ##### 8. gdown이 없다면 설치한다 가상에서
-```bash
+``` bash
  pip install -U pip wheel gdown
 ````
 
