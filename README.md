@@ -27,9 +27,9 @@ free -m
  sudo mkswap /swapfile
  sudo mkswap /swapfile
 
-```
+
 !![Screenshot from 2024-03-08 17-58-15](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e9a6381b-435b-48a4-8376-981448ab4293)
-```
+
 
 
 ##### 5. 한글 폰트 설치
@@ -38,6 +38,7 @@ free -m
 sudo apt-get install language-pack-ko
 sudo locale-gen ko_KR.UTF-8
 sudo apt-get install fonts-nanum fonts-nanum-coding fonts-nanum-extra
+
 ````
 ##### 6. conda install
 
