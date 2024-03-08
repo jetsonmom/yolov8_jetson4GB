@@ -9,6 +9,8 @@ Jetson Nano Developer Kit SD Card Image, and note where it was saved on the comp
 ``` bash
  $uname -m
 ```
+!![Screenshot from 2024-03-08 18-53-36](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/917672ac-b7ff-45c5-8f8f-b27e57e2227e)
+
 - 제가 사용하는 환경은 aarch64입니다. 따라서 설치하는 버전이 일반적인 것과 다르니 유의합시다
 ##### 2. cooling fan
 ```bash
