@@ -63,7 +63,7 @@ sh archiconda.sh -b -p $HOME/archiconda3 && \
 rm archiconda.sh
 
 ````
-###### archiconda3 폴더가 생긴다.
+###### archiconda3 폴더와 archiconda.sh가 생긴다.
 
 ```bash
  export PATH="/path/dli/anaconda3/bin:$PATH"
