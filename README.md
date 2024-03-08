@@ -32,9 +32,13 @@ free -m
 
 ``` bash
  free -m
+sudo fallocate -l 20G /swapfile
  sudo chmod 600 /swapfile
  sudo mkswap /swapfile
- sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo nano /etc/fstab
+
+
 ```
 ##### 결과
 !![Screenshot from 2024-03-08 17-58-15](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e9a6381b-435b-48a4-8376-981448ab4293)
