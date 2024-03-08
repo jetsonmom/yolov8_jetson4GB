@@ -21,11 +21,12 @@ free -m
 ```
 !![Screenshot from 2024-03-08 17-55-55](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e9c856b1-259d-434e-984b-7ea3b2759ec2)
 
-```bash
+``` bash
  free -m
  sudo chmod 600 /swapfile
  sudo mkswap /swapfile
  sudo mkswap /swapfile
+
 ```
 !![Screenshot from 2024-03-08 17-58-15](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e9a6381b-435b-48a4-8376-981448ab4293)
 ```
@@ -42,7 +43,7 @@ sudo apt-get install fonts-nanum fonts-nanum-coding fonts-nanum-extra
 
 ###### 참고 https://cyb.tw/docs/Tech/2020/9/18_Install-anaconda-on-Jetson-Nano.html#install-archiconda
 
-```bash
+``` bash
 sudo apt-get update
 ````
 
