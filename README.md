@@ -59,8 +59,9 @@ sudo apt-get update
 
 ```bash
 wget --quiet -O archiconda.sh https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh && \
-    sh archiconda.sh -b -p $HOME/archiconda3 && \
-    rm archiconda.sh
+sh archiconda.sh -b -p $HOME/archiconda3 && \
+rm archiconda.sh
+
 ````
 
 ```bash
