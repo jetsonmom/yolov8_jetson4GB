@@ -94,8 +94,9 @@ conda create -n py38 python=3.8
 !![2](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/8b656fe5-aaca-44e8-9c43-d1bc558a1fa7)
 
 ###### 가상환경 만들고 가상환경에서 실행한다.
-```bash
+``` bash
 conda activate py38
+
 ````
 ###### 앞부분에 괄호가 생긴다.
 ###### (py38) dli@dli-desktop:~$ 
