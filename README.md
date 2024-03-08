@@ -79,8 +79,9 @@ conda config --add channels c4aarch64
 ````
 ###### 결과 Warning: 'gaiar' already in 'channels' list, moving to the top
 
-```bash
-conda update -n base --all 
+``` bash
+conda update -n base --all
+```
 ###### 위의 문장은 실행에 시간이 많이 걸림 시간이 좀 걸림
 
 
