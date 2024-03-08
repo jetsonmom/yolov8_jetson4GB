@@ -63,7 +63,7 @@ sh archiconda.sh -b -p $HOME/archiconda3 && \
 rm archiconda.sh
 
 ````
-###### archiconda3 폴더와 archiconda.sh가 생긴다.
+###### archiconda3 폴더와 archiconda.sh가 생긴다. 그리고 archiconda.sh 삭제가 된다
 
 ```bash
  export PATH="/path/dli/anaconda3/bin:$PATH"
@@ -96,11 +96,20 @@ conda update -n base --all
 !![Screenshot from 2024-03-08 18-22-41](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/0ba64d82-7cff-482d-a3f9-3b525ea490e3)
 !![Screenshot from 2024-03-08 18-24-19](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d38a4f30-7826-4a26-a8a5-565c8c3707c5)
 
+````
 ``` bash
-conda install -y python3=3.8 libiconv
+conda install -y python=3.8 libiconv
+````
+
+``` bash
 conda install -y conda-build
+````
+!![4](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d5ffbf82-b689-4817-9e3d-726367259654)
+
+``` bash
 conda install -y anaconda-client
-```
+````
+!![5](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/7a159b75-c993-4da4-8a71-fd21ee705a40)
 ``` bash
 conda create -n py38 python=3.8
 ````
@@ -120,16 +129,7 @@ conda activate py38
 
 ``` bash
 python3 --version
-````
-``` bash
-conda install -y conda-build
-````
-!![4](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d5ffbf82-b689-4817-9e3d-726367259654)
 
-``` bash
-conda install -y anaconda-client
-````
-!![5](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/7a159b75-c993-4da4-8a71-fd21ee705a40)
 
 ##### 7. vi ~/.bashrc -> # 'activate a conda environment' 앞에 '#'을 써준다 저장한다. wq!
 
