@@ -33,7 +33,7 @@ free -m
 
 ##### 5. 한글 폰트 설치
 
-```bash
+``` bash
 sudo apt-get install language-pack-ko
 sudo locale-gen ko_KR.UTF-8
 sudo apt-get install fonts-nanum fonts-nanum-coding fonts-nanum-extra
