@@ -5,6 +5,11 @@
 ##### 1. Image Download
 Jetson Nano Developer Kit SD Card Image, and note where it was saved on the computer.
 ######[Download the Jetson Nano Developer Kit SD Card Image]([https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write] URL "Download Jetson Nano Image")
+######자신의 Linux가 몇 bit로 구성되어 있는지 확인하기 
+``` bash
+ $uname -m
+```
+- 제가 사용하는 환경은 aarch64입니다. 따라서 설치하는 버전이 일반적인 것과 다르니 유의합시다
 ##### 2. cooling fan
 ```bash
 git clone https://github.com/jetsonworld/jetson-fan-ctl.git
