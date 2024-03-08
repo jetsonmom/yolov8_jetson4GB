@@ -96,7 +96,11 @@ conda update -n base --all
 !![Screenshot from 2024-03-08 18-22-41](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/0ba64d82-7cff-482d-a3f9-3b525ea490e3)
 !![Screenshot from 2024-03-08 18-24-19](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d38a4f30-7826-4a26-a8a5-565c8c3707c5)
 
-
+``` bash
+conda install -y python3=3.8 libiconv
+conda install -y conda-build
+conda install -y anaconda-client
+```
 ``` bash
 conda create -n py38 python=3.8
 ````
