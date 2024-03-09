@@ -61,8 +61,17 @@ sudo apt-get update
 
 ```bash
 wget --quiet -O archiconda.sh https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh && \
-sh archiconda.sh -b -p $HOME/archiconda3 && \
-rm archiconda.sh
+    sh archiconda.sh -b -p $HOME/archiconda3 && \
+    rm archiconda.sh
+
+export PATH=$HOME/archiconda3/bin:$PATH
+conda config --add channels gaiar && \
+conda config --add channels conda-forge && \
+conda config --add channels c4aarch64 && \
+conda update -n base --all && \
+conda install -y python=3.8 libiconv && \
+conda install -y conda-build && \
+conda install -y anaconda-client
 
 ````
 ###### archiconda3 폴더와 archiconda.sh가 생긴다. 그리고 archiconda.sh 삭제가 된다
@@ -117,8 +126,8 @@ conda create -n py38 python=3.8
 ````
 
 ###### 참고 https://cyb.tw/docs/Tech/2020/9/18_Install-anaconda-o다
-!![1](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e27f1316-7bc5-47cb-88d9-0009a2274891)
-!![2](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/8b656fe5-aaca-44e8-9c43-d1bc558a1fa7)
+!![Screenshot from 2024-03-09 10-22-33](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/4553e77f-b7d2-4cfb-9121-340a7620b2da)
+
 
 ###### 가상환경 만들고 가상환경에서 실행한다.
 ``` bash
