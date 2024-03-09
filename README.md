@@ -73,57 +73,11 @@ conda install -y python=3.8 libiconv && \
 conda install -y conda-build && \
 conda install -y anaconda-client
 
-````
-###### archiconda3 폴더와 archiconda.sh가 생긴다. 그리고 archiconda.sh 삭제가 된다
-
-```bash
- export PATH="/path/dli/anaconda3/bin:$PATH"
-````
-###### 위의 명령을 해줬는데 command not found가 뜨면 터미널을 껏다가 다시 열어서 하세요
-
-###### 3.8을 설치하기 위해 챗에 물어보고 수정 된 명령들  설정 갱신에 필요하다고 한다. 그런데 이미 있다고 나온다
-
-```bash
-conda config --add channels gaiar
-````
-###### 결과 
-###### Warning: 'gaiar' already in 'channels' list, moving to the top
-
 ``` bash
-conda config --add channels conda-forge
-````
-###### 결과 Warning: 'gaiar' already in 'channels' list, moving to the top
 
-``` bash
-conda config --add channels c4aarch64
-````
-###### 결과 Warning: 'gaiar' already in 'channels' list, moving to the top
-
-``` bash
-conda update -n base --all
-```
-###### 위의 문장은 실행에 시간이 많이 걸림 시간이 좀 걸림
-
-!![Screenshot from 2024-03-08 18-22-41](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/0ba64d82-7cff-482d-a3f9-3b525ea490e3)
-!![Screenshot from 2024-03-08 18-24-19](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d38a4f30-7826-4a26-a8a5-565c8c3707c5)
-
-
-``` bash
-conda install -y python=3.8 libiconv
-````
-
-``` bash
-conda install -y conda-build
-````
-!![4](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d5ffbf82-b689-4817-9e3d-726367259654)
-
-``` bash
-conda install -y anaconda-client
-````
-!![5](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/7a159b75-c993-4da4-8a71-fd21ee705a40)
-``` bash
 conda create -n py38 python=3.8
-````
+```
+!![Uploading Screenshot from 2024-03-09 10-22-33.png…]()
 
 ###### 참고 https://cyb.tw/docs/Tech/2020/9/18_Install-anaconda-o다
 !![Screenshot from 2024-03-09 10-22-33](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/4553e77f-b7d2-4cfb-9121-340a7620b2da)
