@@ -106,11 +106,14 @@ https://github.com/ultralytics/ultralytics?tab=readme-ov-file
 !![제목 없음](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d687b7ea-5889-466e-83cb-a249954658f1)
 
 
-yolo 실행은 display가 필요하므로 jetson을 TV에 연결하고 아래를 실행하였다. 물론 USB camera를 연결하였다. 그러나 전혀 Yolo를 실행하는 화면이 보이지 않았다.
+######USB camera를 연결하였다. 그러나 전혀 Yolo를 실행하는 화면이 보이지 않았다. 이유는 토리삼촌과 나의 환경이 달라서이다. 코드 수정해야한다.
+``` bash
+gedit  detectY8.py
+```
 
 (yolo) dli@jetson:~/Jetson-Nano2/V8$ python detectY8.py 
 
-코드를 보니 rtsp가 기본으로 되어있다. 그래서 rtsp를 사용하지 않도록 변경했다.
+###### 코드를 보니 rtsp가 기본으로 되어있다. 그래서 rtsp를 사용하지 않도록 변경했다.
 
 def predict(cfg=DEFAULT_CFG, use_python=False):
     brtsp = True
