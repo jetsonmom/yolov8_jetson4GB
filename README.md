@@ -105,7 +105,10 @@ https://github.com/ultralytics/ultralytics?tab=readme-ov-file
 
 !![제목 없음](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/d687b7ea-5889-466e-83cb-a249954658f1)
 
-!!/home/dli/Pictures/Screenshot from 2024-03-24 23-44-20.png
+!![Screenshot from 2024-03-24 23-44-20](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/89dc7fc0-fc81-48ba-8268-e9b7667e04f7)
+
+
+
 
 
 ######USB camera를 연결하였다. 그러나 전혀 Yolo를 실행하는 화면이 보이지 않았다. 이유는 토리삼촌과 나의 환경이 달라서이다. 코드 수정해야한다.
