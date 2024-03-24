@@ -141,53 +141,12 @@ cd Jetson-Nano2/V8
  pip install torch-*.whl torchvision-*.whl
 ````
 ###### 결과는 다음과 같다. Processing ./torch-1.11.0a0+gitbc2c6ed-cp38-cp38-linux_aarch64.whl
-Requirement already satisfied: typing-extensions in /home/dli/archiconda3/envs/py38/lib/python3.8/site-packages (from torch==1.11.0a0+gitbc2c6ed) (4.4.0)
-Installing collected packages: torch
-Successfully installed torch-1.11.0a0+gitbc2c6ed
+Requirement already satisfied: typing-extensions in /home/dli/archiconda3/envs/py38/lib/python3.8/site-packages (from torch==1.11.0a0+gitbc2c6정
 
-###### 10. 확인하기 (py38) dli@dli-desktop:~$ python3
- ```bash
-python3
-import torch
-import torchvision
-print("torch ver :",torch.__version__)
-print("CUDA used:", torch_cuda.is_available())
-````
-###### 결과는 다음과 같다. Python 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 05:56:18) 
-[GCC 10.3.0] on linux Type "help", "copyright", "credits" or "license" for more information. 
-import torch
-import torchvision 
-print("torch ver :",torch.__version__) 
-torch ver : 1.11.0a0+gitbc2c6ed
-print("torchvision ver :",torchvision.__version__)
-torchvision ver : 0.12.0a0+9b5a3fe
-print("CUDA used:", torch_cuda.is_available())
-CUDA used: True
-quit()  —>  빠져나오는 명령
+코드를 보니 rtsp가 기본으로 되어있다. 그래서 rtsp를 사용하지 않도록 변경했다.
 
-##### 11. file clone 가상환경에
- ```bash
-sudo git clone https://github.com/Tory-Hwang/Jetson-Nano2.git
-````
-```bash
- ls
-cd Jetson-Nano2/V8
-````
- ```bash
-pip install ultralytics
-````
-```bash
-gedit requirements.txt
-````
-```bash
-torch==1.11.0
-torchvision=0.12.0
-````
-```bash
-pip install -r requirements.txt
-````
-!![2](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/4442d525-ee44-425c-8dbc-83b76ad02718)
-
-```bash
-pip install ffmpeg-python
-````
+def predict(cfg=DEFAULT_CFG, use_python=False):
+    brtsp = True
+-> 
+    brtsp = False
+detectY8.py 스크립트에서 RTSP(Remote Desktop Protocol)를 사용하지 않도록 변경하려면, brtsp = True 라인을 찾아 False로 변경해야 합니다. 이 변경은 스크립트가 RTSP 스트리밍 대신 다른 비디오 입력 소스(예: USB 카메라)를 사용하도록 지시합니다. 코드에서 brtsp 변수가 RTSP 스트리밍을 활성화하거나 비활성화하는 데 사용되는 것으로 보
