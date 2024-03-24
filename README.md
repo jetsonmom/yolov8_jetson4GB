@@ -1,147 +1,140 @@
+######  참고 링크 https://blog.naver.com/tory0405/223246391729
 
-##### 참고 링크 https://docs.ultralytics.com/
-##### 참고 링크 https://blog.naver.com/tory0405/223246391729  설치는 따라하니 잘 되지만 하드웨어 환경이 나랑 다른 듯하다. 코드를 따로 수정을 해주었다. 
-##### https://medium.com/@deandu/how-to-use-the-yolov8-with-csi-camera-in-jetson-xavier-d2286a0f22bb
-##### 1. Image Download
-Jetson Nano Developer Kit SD Card Image, and note where it was saved on the computer.
-######[Download the Jetson Nano Developer Kit SD Card Image]([https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write] URL "Download Jetson Nano Image")
-######자신의 Linux가 몇 bit로 구성되어 있는지 확인하기 
-``` bash
- $uname -m
-```
-!![Screenshot from 2024-03-08 18-53-36](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/917672ac-b7ff-45c5-8f8f-b27e57e2227e)
+https://medium.com/@scofield44165/jetson-nano-dev-kit%E4%B8%AD%E5%AE%89%E8%A3%9Darchiconda-install-archiconda-in-jetson-nano-dev-kit-1e695326596f
 
-- 제가 사용하는 환경은 aarch64입니다. 따라서 설치하는 버전이 일반적인 것과 다르니 유의합시다
-##### 2. cooling fan
-```bash
-git clone https://github.com/jetsonworld/jetson-fan-ctl.git
-ls
-cd jetson-fan-ctl
-sudo sh install.sh
-````
-###### sudo sh install.sh 명령어는 리눅스나 유닉스 기반 시스템에서 사용되며, 주로 스크립트나 프로그램을 관리자 권한으로 설치하기 위해 사용됩니다. 이 명령어를 분해하여 그 의미를 자세히 설명하겠습니다:sudo: "Superuser Do"의 약자로, 다른 명령어를 슈퍼유저(루트 유저)의 권한으로 실행하게 해주는 프로그램입니다. 일반 사용자가 시스템에 영향을 미치는 작업(예: 소프트웨어 설치, 시스템 설정 변경 등)을 수행할 때 사용합니다.sh: "Shell"의 약자로, 쉘 스크립트를 해석하고 실행하는 명령어 해석기입니다.sh는 다양한 쉘 중 하나인 Bourne Shell을 가리키기도 하며, 리눅스나 유닉스 시스템에서 스크립트를 실행하는 데 사용됩니다.install.sh: install.sh는 일반적으로 설치 스크립트 파일의 이름입니다.이 스크립트는 소프트웨어나 프로그램을 시스템에 설치하기 위한 명령어들을 포함하고 있습니다.파일 이름의 .sh 확장자는 이 파일이 쉘 스크립트임을 나타냅니다.따라서, sudo sh install.sh 명령어는 install.sh라는 쉘 스크립트를 슈퍼유저 권한으로 실행하여, 스크립트에 포함된 지시에 따라 프로그램이나 소프트웨어를 설치하라는 의미입니다.이 명령어를 사용함으로써, 사용자는 스크립트에 정의된 대로 소프트웨어 설치 과정을 자동으로 진행할 수 있습니다.이 방법은 복잡한 설치 과정을 단순화하고, 설치 시 필요한 다양한 명령어를 일일이 입력할 필요 없이 소프트웨어를 쉽게 설치할 수 있게 해줍니다.
-##### 3.  usb카메라 (usb카메라는 잘 된다. 하지만 csi카메라는 가상에서는 실행이 되질 않았다)
-
-##### 4. swap memory
-``` bash
-free -m
-
-```
-##### 결과
-!![Screenshot from 2024-03-08 17-55-55](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e9c856b1-259d-434e-984b-7ea3b2759ec2)
-
-``` bash
- free -m
-sudo fallocate -l 20G /swapfile
- sudo chmod 600 /swapfile
- sudo mkswap /swapfile
-sudo swapon /swapfile
-
-```
-##### 결과
-!![Screenshot from 2024-03-08 17-58-15](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/e9a6381b-435b-48a4-8376-981448ab4293)
+###### 잘 되던게 github 정리하려고 다시 시작했는데 안된다. 경험하지 않은 에러가 속출한다. 그 내용은 블로그에 정리를 하였다. https://blog.naver.com/jmerrier/223392057106 그리고 다시 정리한다. 
 
 
+처음부터 yolo 가상환경 만들기
+ uname -a
+wget https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh
+sudo chmod 755 Archiconda3-0.2.3-Linux-aarch64.sh
 
-##### 5. 한글 폰트 설치
+dli@dli:~$ ls
+Archiconda3-0.2.3-Linux-aarch64.sh  Pictures
+Desktop                             Public
+Documents                           Templates
+Downloads                           Videos
+examples.desktop                    yolov8_4gb
+Music
 
-``` bash
-sudo apt-get install language-pack-ko
-sudo locale-gen ko_KR.UTF-8
-sudo apt-get install fonts-nanum fonts-nanum-coding fonts-nanum-extra
+dli@dli:~$ ./Archiconda3-0.2.3-Linux-aarch64.sh 
 
-````
-##### 6. conda install
-
-###### 참고 https://cyb.tw/docs/Tech/2020/9/18_Install-anaconda-on-Jetson-Nano.html#install-archiconda
-
-``` bash
-sudo apt-get update
-````
-
-```bash
-wget --quiet -O archiconda.sh https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh && \
-    sh archiconda.sh -b -p $HOME/archiconda3 && \
-    rm archiconda.sh
-
-export PATH=$HOME/archiconda3/bin:$PATH
-conda config --add channels gaiar && \
-conda config --add channels conda-forge && \
-conda config --add channels c4aarch64 && \
-conda update -n base --all && \
-conda install -y python=3.8 libiconv && \
-conda install -y conda-build && \
-conda install -y anaconda-client
-
-``` bash
-
-conda create -n py38 python=3.8
-```
-!![Uploading Screenshot from 2024-03-09 10-22-33.png…]()
-
-###### 참고 https://cyb.tw/docs/Tech/2020/9/18_Install-anaconda-o다
-!![Screenshot from 2024-03-09 10-22-33](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/4553e77f-b7d2-4cfb-9121-340a7620b2da)
+yes
+enter
 
 
-###### 가상환경 만들고 가상환경에서 실행한다.
-``` bash
-conda activate py38
+yes
 
-````
-###### 앞부분에 괄호가 생긴다.
-###### (py38) dli@dli-desktop:~$ 
-##### 6. python3 버전 확인하기
+result 
+installing: cryptography-2.5-py37h9d9f1b6_1 ...
+installing: wheel-0.32.1-py37_0 ...
+installing: pip-10.0.1-py37_0 ...
+installing: pyopenssl-18.0.0-py37_0 ...
+installing: urllib3-1.23-py37_0 ...
+installing: requests-2.19.1-py37_0 ...
+installing: conda-4.5.12-py37_0 ...
+installation finished.
+Do you wish the installer to initialize Archiconda3
+in your /home/dli/.bashrc ? [yes|no]
+[no] >>> yes
 
-``` bash
-python3 --version
-
-
-##### 7. vi ~/.bashrc -> # 'activate a conda environment' 앞에 '#'을 써준다 저장한다. wq!
-
-``` bash
-vi ~/.bashrc
-````
-``` bash
-source ~/.bashrc
-````
-``` bash
- conda activate py38
-````
-##### 8. gdown이 없다면 설치한다 가상에서
-``` bash
- pip install -U pip wheel gdown
-````
-
-##### 9.   pytorch 1.11.0, torchvision 1.12.0  
-!![1](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/20f7e0dd-50ce-47e3-8d39-1c67fe61a870)
+Initializing Archiconda3 in /home/dli/.bashrc
+A backup will be made to: /home/dli/.bashrc-archiconda3.bak
 
 
-```bash
-gdown https://drive.google.com/uc?id=1hs9HM0XJ2LPFghcn7ZMOs5qu5HexPXwM
-````
-```bash
-gdown https://drive.google.com/uc?id=1m0d8ruUY8RvCP9eVjZw4Nc8LAwM8yuGV
-````
-```bash
-sudo  mv torch-1.11.0a0+gitbc2c6ed-cp38-cp38-linux_aarch64.whl ~/Jetson-Nano2/V8
-````
+For this change to become active, you have to open a new terminal.
 
-```bash
-sudo  mv torchvision-0.12.0a0+9b5a3fe-cp38-cp38-linux_aarch64.whl ~/Jetson-Nano2/V8
-````
-###### 가상환경으로 간다.
+Thank you for installing Archiconda3!
 
-```bash
- conda activate py38
-````
-```bash
-cd Jetson-Nano2/V8
-````
-```bash
- pip install torch-*.whl torchvision-*.whl
-````
-###### 결과는 다음과 같다. Processing ./torch-1.11.0a0+gitbc2c6ed-cp38-cp38-linux_aarch64.whl
-Requirement already satisfied: typing-extensions in /home/dli/archiconda3/envs/py38/lib/python3.8/site-packages (from torch==1.11.0a0+gitbc2c6정
+
+conda env list
+conda activate base
+
+dli@dli:~$ jetson_release
+
+result
+
+Software part of jetson-stats 4.2.7 - (c) 2024, Raffaello Bonghi
+Model: NVIDIA Jetson Nano Developer Kit - Jetpack 4.5.1 [L4T 32.5.1]
+NV Power Mode[0]: MAXN
+Serial Number: [XXX Show with: jetson_release -s XXX]
+Hardware:
+ - P-Number: p3448-0000
+ - Module: NVIDIA Jetson Nano (4 GB ram)
+Platform:
+ - Distribution: Ubuntu 18.04 Bionic Beaver
+ - Release: 4.9.201-tegra
+jtop:
+ - Version: 4.2.7
+ - Service: Active
+Libraries:
+ - CUDA: 10.2.89
+ - cuDNN: 8.0.0.180
+ - TensorRT: 7.1.3.0
+ - VPI: 1.0.15
+ - Vulkan: 1.2.70
+ - OpenCV: 4.1.1 - with CUDA: NO
+
+python3.8 가상환경 만들기
+
+base가 아닌 native 환경에서 아래 명령어를 실행한다.
+
+conda create -n yolo python=3.8 -y
+
+dli@dli:~$ conda env list
+# conda environments:
+#
+base                  *  /home/dli/archiconda3
+yolo                     /home/dli/archiconda3/envs/yolo
+
+
+dli@dli:~$ conda activate yolo
+(yolo) dli@dli:~$ 
+
+(yolo) dli@dli:~$ pip install -U pip wheel gdown
+
+(yolo) dli@dli:~$  gdown https://drive.google.com/uc?id=1hs9HM0XJ2LPFghcn7ZMOs5qu5HexPXwM
+
+(yolo) dli@dli:~$ gdown https://drive.google.com/uc?id=1m0d8ruUY8RvCP9eVjZw4Nc8LAwM8yuGV
+
+아래 두 라인을 실행(library 설치) 후 torch, torchvision은 확인이 가능하였다.
+sudo apt-get install libopenblas-base libopenmpi-dev
+sudo apt-get install libomp-dev
+
+(yolo) dli@dli:~$ python
+Python 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 05:56:18) 
+[GCC 10.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+/home/dli/archiconda3/envs/yolo/lib/python3.8/site-packages/torch/_masked/__init__.py:223: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at  /pytorch/torch/csrc/utils/tensor_numpy.cpp:68.)
+  example_input = torch.tensor([[-3, -2, -1], [0, 1, 2]])
+
+(yolo) dli@dli:~$ conda install numpy
+after download -> install
+pip install torchvision-0.12.0a0+9b5a3fe-cp38-cp38-linux_aarch64.whl
+
+(yolo) dli@dli:~$ python
+
+>>> import torch
+>>> import torchvision
+>>> print(torch.__version__)
+>>> print(torchvision.__version__)
+>>> print("cuda used", torch.cuda.is_available())
+cuda used True
+>>> 
+
+git clone https://github.com/Tory-Hwang/Jetson-Nano2
+
+(yolo) dli@dli:~$ cd Jetson-Nano2/
+(yolo) dli@dli:~/Jetson-Nano2$ cd V8
+(yolo) dli@dli:~/Jetson-Nano2/V8$ pip install ultralytics
+(yolo) dli@dli:~/Jetson-Nano2/V8$ pip install -r requirements.txt 
+(yolo) dli@jdli:~/Jetson-Nano2/V8$ pip install ffmpeg-python
+
+yolo 실행은 display가 필요하므로 jetson을 TV에 연결하고 아래를 실행하였다. 물론 USB camera를 연결하였다. 그러나 전혀 Yolo를 실행하는 화면이 보이지 않았다.
+
+(yolo) dli@jetson:~/Jetson-Nano2/V8$ python detectY8.py 
 
 코드를 보니 rtsp가 기본으로 되어있다. 그래서 rtsp를 사용하지 않도록 변경했다.
 
@@ -149,4 +142,10 @@ def predict(cfg=DEFAULT_CFG, use_python=False):
     brtsp = True
 -> 
     brtsp = False
-detectY8.py 스크립트에서 RTSP(Remote Desktop Protocol)를 사용하지 않도록 변경하려면, brtsp = True 라인을 찾아 False로 변경해야 합니다. 이 변경은 스크립트가 RTSP 스트리밍 대신 다른 비디오 입력 소스(예: USB 카메라)를 사용하도록 지시합니다. 코드에서 brtsp 변수가 RTSP 스트리밍을 활성화하거나 비활성화하는 데 사용되는 것으로 보
+detectY8.py 스크립트에서 RTSP(Remote Desktop Protocol)를 사용하지 않도록 변경하려면, brtsp = True 라인을 찾아 False로 변경해야 합니다. 이 변경은 스크립트가 RTSP 스트리밍 대신 다른 비디오 입력 소스(예: USB 카메라)를 사용하도록 지시합니다. 코드에서 brtsp 변수가 RTSP 스트리밍을 활성화하거나 비활성화하는 데 사용되는 것으로 보입니다.
+
+
+
+
+
+
