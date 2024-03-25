@@ -91,13 +91,13 @@ cuda used True
 >>> 
 
 git clone https://github.com/Tory-Hwang/Jetson-Nano2
-
+``` bash
 (yolo) dli@dli:~$ cd Jetson-Nano2/
 (yolo) dli@dli:~/Jetson-Nano2$ cd V8
 (yolo) dli@dli:~/Jetson-Nano2/V8$ pip install ultralytics
 (yolo) dli@dli:~/Jetson-Nano2/V8$ pip install -r requirements.txt 
 (yolo) dli@jdli:~/Jetson-Nano2/V8$ pip install ffmpeg-python
-
+```
 ######  yolov8n.pt 다운로드
 https://github.com/ultralytics/ultralytics?tab=readme-ov-file
 위의 링크에서 다운로드 받았다.
