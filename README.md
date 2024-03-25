@@ -126,6 +126,8 @@ gedit  detectY8.py
 (yolo) dli@jetson:~/Jetson-Nano2/V8$ python detectY8.py 
 
 ###### 코드를 보니 rtsp가 기본으로 되어있다. 그래서 rtsp를 사용하지 않도록 변경했다.
+!![Screenshot from 2024-03-25 12-58-30](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/3883ca74-efd7-4e92-9888-89b40a9e01bd)
+
 
 def predict(cfg=DEFAULT_CFG, use_python=False):
     brtsp = True
