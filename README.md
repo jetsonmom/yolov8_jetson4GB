@@ -2,7 +2,7 @@
 
 https://medium.com/@scofield44165/jetson-nano-dev-kit%E4%B8%AD%E5%AE%89%E8%A3%9Darchiconda-install-archiconda-in-jetson-nano-dev-kit-1e695326596f
 
-###### 잘 되던게 github 정리하려고 다시 시작했는데 안된다. 경험하지 않은 에러가 속출한다. 그 내용은 블로그에 정리를 하였다. 에러가 많아서 무척 길고 해결에 많은 시간이 필요했다https://blog.naver.com/jmerrier/223392057106 그리고 다시 정리한다. 제타님이 처음부터 가상에서 한 점이 나랑 다르다. 그래서 나도 제타님을 따라서 해보았다.  https://blog.naver.com/zeta0807
+###### 잘 되던게 github 정리하려고 다시 시작했는데 안된다. 경험하지 않은 에러가 속출한다. 그 내용은 블로그에 정리를 하였다. 에러가 많아서 무척 길고 해결에 많은 시간이 필요했다https://blog.naver.com/jmerrier/223392057106 그리고 다시 정리한다. 제타님이 처음부터 가상에서 한 점이 나랑 다르다. 그래서 가상에서 하였다.  참고 https://blog.naver.com/zeta0807
 
 
 
