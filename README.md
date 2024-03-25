@@ -117,8 +117,7 @@ https://github.com/ultralytics/ultralytics?tab=readme-ov-file
 
 
 
-
-######USB camera를 연결하였다. 그러나 전혀 Yolo를 실행하는 화면이 보이지 않았다. 이유는 토리삼촌과 나의 환경이 달라서이다. 코드 수정해야한다.
+###### USB camera를 연결하였다. 그러나 전혀 Yolo를 실행하는 화면이 보이지 않았다. 이유는 토리삼촌과 나의 환경이 달라서이다. 코드 수정해야한다.
 ``` bash
 gedit  detectY8.py
 ```
