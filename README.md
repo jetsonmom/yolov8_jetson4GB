@@ -62,6 +62,7 @@ Do you wish the
 sudo apt-get install libopenblas-base libopenmpi-dev
 sudo apt-get install libomp-dev
 ```
+``` bash
 (yolo) dli@dli:~$ python
 Python 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 05:56:18) 
 [GCC 10.3.0] on linux
@@ -70,6 +71,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 /home/dli/archiconda3/envs/yolo/lib/python3.8/site-packages/torch/_masked/__init__.py:223: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at  /pytorch/torch/csrc/utils/tensor_numpy.cpp:68.)
   example_input = torch.tensor([[-3, -2, -1], [0, 1, 2]])
 >>>
+```
 
 ###### 위의 에러는 numpy 다운로드 안되어 있어서 에러 발생
 ``` bash
@@ -80,6 +82,8 @@ after download -> install
 pip install torchvision-0.12.0a0+9b5a3fe-cp38-cp38-linux_aarch64.whl
 pip install torch-1.11.0a0+gitbc2c6ed-cp38-cp38-linux_aarch64.whl
 ```
+``` bash
+
 (yolo) dli@dli:~$ python
 
 >>> import torch
@@ -89,8 +93,10 @@ pip install torch-1.11.0a0+gitbc2c6ed-cp38-cp38-linux_aarch64.whl
 >>> print("cuda used", torch.cuda.is_available())
 cuda used True
 >>> 
-
+```
+``` bash
 git clone https://github.com/Tory-Hwang/Jetson-Nano2
+```
 ``` bash
 (yolo) dli@dli:~$ cd Jetson-Nano2/
 (yolo) dli@dli:~/Jetson-Nano2$ cd V8
