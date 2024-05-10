@@ -67,14 +67,14 @@ conda init bash
 source ~/.bashrc
 
 # 가상 환경 생성 및 패키지 설치
-conda create -n yolov5-env python=3.8
-conda activate yolov5-env
+conda create -n yolov5 python=3.8
+conda activate yolov5
 pip install -r ~/yolov5/requirements.txt
 ```
 # Do you wish the 
 
 ``` bash
- conda activate yolo
+ conda activate yolov5
 ```
 
 ###### 결과 가상에서 설치 torch, torchvosion 다운로드
