@@ -32,6 +32,10 @@ Music
 yes--->
 enter --->
 yes
+in your /home/ldh/.bashrc ? [yes|no]
+[no] >>> yes
+
+
 
 ###### result 
 installing: cryptography-2.5-py37h9d9f1b6_1 ...
