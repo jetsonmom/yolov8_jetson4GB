@@ -29,6 +29,11 @@ Music
  ./Archiconda3-0.2.3-Linux-aarch64.sh 
 ```
 ###### 실행 중 선택하라고 나온다.
+설치 프로그램 진행 방법
+./Archiconda3-0.2.3-Linux-aarch64.sh 실행이미 실행 중인 상태이므로 바로 다음 단계로 넘어갑니다.
+라이선스 스크롤링라이선스 텍스트를 모두 읽거나 빠르게 넘기고 싶다면 [q] 키를 누르세요. 텍스트가 모두 표시될 때까지 Enter 키를 계속 누를 수도 있습니다.
+설치 경로 지정 및 설치 완료설치 경로를 입력하라는 메시지가 나타납니다. 기본 경로를 사용하려면 [Enter] 키를 눌러 계속하세요.
+환경 변수 설정설치가 완료되면 터미널에서 conda 명령을 사용하기 위해 다음과 같이 .bashrc에 경로를 추가하세요.
 yes--->
 enter --->
 yes
@@ -46,6 +51,14 @@ installing: urllib3-1.23-py37_0 ...
 installing: requests-2.19.1-py37_0 ...
 installing: conda-4.5.12-py37_0 ...
 installation finished.
+
+``` bash
+echo 'export PATH="~/archiconda3/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+conda init bash
+source ~/.bashrc
+
+```
 Do you wish the 
 
 ``` bash
