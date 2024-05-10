@@ -146,32 +146,23 @@ Thank you for installing Archiconda3!
 
 ``` bash
 conda env list
+conda activate base
+jetson_release 
+
 ```
-# conda environments:
-#
-base                  *  /home/ldh/archiconda3
+##### conda environments:
+python3.8 가상환경 만들기
 
-# Archiconda 경로를 환경 변수에 추가
-echo 'export PATH="$HOME/archiconda3/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-
-# conda 업데이트
-conda update conda
-
-# conda init 및 초기화
-conda init bash
-source ~/.bashrc
-
-# 가상 환경 생성 및 패키지 설치
-conda create -n yolov5 python=3.8
-conda activate yolov5
-pip install -r ~/yolov5/requirements.txt
+base가 아닌 native 환경에서 아래 명령어를 실행한다.
+``` bash
+conda create -n yolo python=3.8 -y
+conda env list
 ```
-# Do you wish the 
 
 ``` bash
- conda activate yolov5
+ conda activate yolo
 ```
+###### "conda activate yolo"를 실행하여 yolo 가상환경으로 진입해서 pytorch, torchvision을 설치하는 과정이다.
 
 ###### 결과 가상에서 설치 torch, torchvosion 다운로드
 (yolo) dli@dli:~$ 
