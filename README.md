@@ -29,8 +29,8 @@ Music
  ./Archiconda3-0.2.3-Linux-aarch64.sh 
 ```
 ###### 실행 중 선택하라고 나온다.
-yes
-enter
+yes--->
+enter --->
 yes
 
 ###### result 
