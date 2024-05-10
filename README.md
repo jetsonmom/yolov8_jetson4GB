@@ -41,7 +41,7 @@ in your /home/ldh/.bashrc ? [yes|no]
 [no] >>> yes
 
 
-
+``` bash
 ###### result 
 ldh@ldh-desktop:~$  ./Archiconda3-0.2.3-Linux-aarch64.sh
 
@@ -143,7 +143,7 @@ A backup will be made to: /home/ldh/.bashrc-archiconda3.bak
 For this change to become active, you have to open a new terminal.
 
 Thank you for installing Archiconda3!
-
+```
 ``` bash
 conda env list
 conda activate base
