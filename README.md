@@ -51,15 +51,27 @@ installing: urllib3-1.23-py37_0 ...
 installing: requests-2.19.1-py37_0 ...
 installing: conda-4.5.12-py37_0 ...
 installation finished.
-
+Archiconda가 ~/archiconda3 폴더에 설치되어 있음을 확인했으므로, 해당 경로를 환경 변수에 추가하여 conda 명령을 사용할 수 있도록 해보겠습니다.
+Archiconda 경로 추가
+다음 명령을 실행하여 Archiconda의 bin 폴더를 환경 변수에 추가합니다.
 ``` bash
-echo 'export PATH="~/archiconda3/bin:$PATH"' >> ~/.bashrc
+# Archiconda 경로를 환경 변수에 추가
+echo 'export PATH="$HOME/archiconda3/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
+
+# conda 업데이트
+conda update conda
+
+# conda init 및 초기화
 conda init bash
 source ~/.bashrc
 
+# 가상 환경 생성 및 패키지 설치
+conda create -n yolov5-env python=3.8
+conda activate yolov5-env
+pip install -r ~/yolov5/requirements.txt
 ```
-Do you wish the 
+# Do you wish the 
 
 ``` bash
  conda activate yolo
