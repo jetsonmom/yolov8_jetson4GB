@@ -212,7 +212,12 @@ git clone https://github.com/Tory-Hwang/Jetson-Nano2
 (yolo) dli@dli:~/Jetson-Nano2/V8$ pip install ultralytics
 (yolo) dli@dli:~/Jetson-Nano2/V8$ pip install -r requirements.txt 
 (yolo) dli@jdli:~/Jetson-Nano2/V8$ pip install ffmpeg-python
-```
+(yolo) dli@dli:~/Jetson-Nano2$ sudo apt install tree
+(yolo) dli@jdli:~/Jetson-Nano2$treee -L 2
+```![image](https://github.com/jetsonmom/yolov8_jetson4GB/assets/92077615/3eaf5716-b3f0-403c-88c1-473befe274e0)
+
+
+!
 ######  yolov8n.pt 다운로드
 https://github.com/ultralytics/ultralytics?tab=readme-ov-file
 위의 링크에서 다운로드 받았다.
