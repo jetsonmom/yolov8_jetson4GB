@@ -253,3 +253,5 @@ detectY8.py 스크립트에서 RTSP(Remote Desktop Protocol)를 사용하지 않
 
 
 
+
+
