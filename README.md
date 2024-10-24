@@ -213,7 +213,7 @@ git clone https://github.com/Tory-Hwang/Jetson-Nano2
 (yolo) dli@dli:~/Jetson-Nano2/V8$ pip install -r requirements.txt 
 (yolo) dli@jdli:~/Jetson-Nano2/V8$ pip install ffmpeg-python
 (yolo) dli@dli:~/Jetson-Nano2$ sudo apt install tree
-(yolo) dli@jdli:~/Jetson-Nano2$treee -L 2
+(yolo) dli@jdli:~/Jetson-Nano2$ tree -L 2
 ```
 #####
 
