@@ -256,6 +256,37 @@ def predict(cfg=DEFAULT_CFG, use_python=False):
     brtsp = False
 detectY8.py 스크립트에서 RTSP(Remote Desktop Protocol)를 사용하지 않도록 변경하려면, brtsp = True 라인을 찾아 False로 변경해야 합니다. 이 변경은 스크립트가 RTSP 스트리밍 대신 다른 비디오 입력 소스(예: USB 카메라)를 사용하도록 지시합니다. 코드에서 brtsp 변수가 RTSP 스트리밍을 활성화하거나 비활성화하는 데 사용되는 것으로 보입니다.
 
+brtsp = True를 설정하는 것은 RTSP(Real Time Streaming Protocol) 스트림 처리와 관련이 있습니다. 이 설정의 의미와 변경하는 이유를 설명해드리겠습니다:
+
+brtsp(Better RTSP) 설정의 목적:
+
+더 효율적인 RTSP 스트림 처리
+버퍼링 최적화
+프레임 스킵 방지
+메모리 사용량 최적화
+
+
+True로 설정할 때의 장점:
+
+더 안정적인 스트림 처리
+지연시간 감소
+메모리 효율성 향상
+
+
+False로 변경하는 주요 이유들:
+
+하드웨어 리소스가 제한적일 때
+실시간성보다 처리의 정확성이 더 중요할 때
+메모리 사용량을 줄여야 할 때
+레거시 시스템과의 호환성이 필요할 때
+# 상황에 따른 설정 예시
+if hardware_limited:
+    brtsp = False  # 리소스 제한적인 경우
+elif need_realtime:
+    brtsp = True   # 실시간 처리 중요한 경우
+elif legacy_system:
+    brtsp = False  # 구형 시스템 호환성
+
 
 ``` bash
 (yolo) yolo@yolo-desktop:~/Jetson-Nano2/V8$ python detectY8.py
