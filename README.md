@@ -50,9 +50,8 @@ in your /home/ldh/.bashrc ? [yes|no]
 ```
 
 ``` bash
-  ./Archiconda3-0.2.3-Linux-aarch64.sh
-```
-```
+  ./Archiconda3-0.2.3-Linux-aarch64.sh 결과는 아래와 같다
+
 Welcome to Archiconda3 0.2.3
 
 In order to continue the installation process, please review the license
