@@ -162,6 +162,7 @@ python3.8 가상환경 만들기
 
 base가 아닌 native 환경에서 아래 명령어를 실행한다.
 ``` bash
+conda deactivate
 conda create -n yolo python=3.8 -y
 conda env list
 ```
