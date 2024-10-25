@@ -50,10 +50,9 @@ in your /home/ldh/.bashrc ? [yes|no]
 
 
 ``` bash
-result 
-ldh@ldh-desktop:~$  ./Archiconda3-0.2.3-Linux-aarch64.sh
-
-Welcome to Archiconda3 0.2.3
+  ./Archiconda3-0.2.3-Linux-aarch64.sh
+```
+<b> Welcome to Archiconda3 0.2.3
 
 In order to continue the installation process, please review the license
 agreement.
@@ -151,7 +150,7 @@ A backup will be made to: /home/ldh/.bashrc-archiconda3.bak
 For this change to become active, you have to open a new terminal.
 
 Thank you for installing Archiconda3!
-```
+
 ``` bash
 conda env list
 conda activate base
