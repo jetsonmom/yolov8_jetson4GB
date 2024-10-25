@@ -50,7 +50,7 @@ in your /home/ldh/.bashrc ? [yes|no]
 
 
 ``` bash
-###### result 
+result 
 ldh@ldh-desktop:~$  ./Archiconda3-0.2.3-Linux-aarch64.sh
 
 Welcome to Archiconda3 0.2.3
