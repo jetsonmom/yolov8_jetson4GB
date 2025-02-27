@@ -8,7 +8,7 @@ chatgpt도움을 받아서 컴공과 학생이 만듦
 https://github.com/moon-joy/Jetson-nano/blob/main/README.md
   
 
-
+ 
 
 ``` python
 uycgb
