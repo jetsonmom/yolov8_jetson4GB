@@ -6,7 +6,7 @@ https://blog.naver.com/zeta0807
 <b> 참고 링크 : 강의 때 상금 걸고 대회 했을 때 1등한 학생이 한 내용
 chatgpt도움을 받아서 컴공과 학생이 만듦
 https://github.com/moon-joy/Jetson-nano/blob/main/README.md
-
+  
 
 
 
